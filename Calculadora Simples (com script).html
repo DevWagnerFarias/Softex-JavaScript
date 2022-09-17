@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+
+    Digite o primeiro número<br />
+    <input id="n1" type="number" /><br />
+    Digite o segundo número<br />
+    <input id="n2" type="number" /><br /><br />
+    <button onclick="soma">Soma</button>                  
+    <button onclick="subtracao">Subtração</button>
+    <button onclick="multiplicacao">Multiplicação</button>
+    <button onclick="divisao">Divisão</button>
+    <br /><br />
+    O Resultado é <span></span>
+
+    <script>
+        var n1 = document.querySelector('#n1')     //Atribuindo às variáveis os numeros que o usuario digitou
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+
+        function soma() {                 //criando as funções para as operações que são chamadas quando aperta os botões
+            resultado.innerHTML= parseFloat(n1.value) + parseFloat(n2.value)
+        }
+        function subtracao() {
+            resultado.innerHTML= parseFloat(n1.value) - parseFloat(n2.value)
+        }
+        function multiplicacao() {
+            resultado.innerHTML= parseFloat(n1.value) * parseFloat(n2.value)
+        }
+        function divisao() {
+            resultado.innerHTML= parseFloat(n1.value) / parseFloat(n2.value)
+        }
+
+    </script>
+</body>
+</html>
